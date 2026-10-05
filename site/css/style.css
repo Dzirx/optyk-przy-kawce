@@ -497,7 +497,7 @@ p { margin: 0 0 1rem; }
 .badanie-faq .faq summary { padding: .85rem 1.3rem; font-size: 1.05rem; font-weight: 600; }
 .badanie-faq .faq details p { font-size: 1rem; max-width: 75ch; }
 .badanie-zaproszenie { background: var(--granat); color: var(--tlo); position: relative; isolation: isolate; overflow: hidden; }
-.badanie-zaproszenie::before { content: ''; position: absolute; z-index: -1; inset: 0 0 0 48%; background: url('../img/salon.jpg') center 45% / cover; opacity: .38; }
+.badanie-zaproszenie::before { content: ''; position: absolute; z-index: -1; inset: 0 0 0 48%; background: url('../img/salon-optyczny-lublin-gablota-z-oprawkami.jpg') center 45% / cover; opacity: .38; }
 .badanie-zaproszenie .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem 3rem; padding-block: 2.2rem; }
 .badanie-zaproszenie h2 { font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: .7rem; }
 .badanie-zaproszenie p { margin: 0; font-size: 1rem; }
@@ -854,7 +854,6 @@ h1, h2, h3 { font-weight: 700; }
 .sloneczne-komfort .wrap { display: grid; gap: 1.5rem; align-items: center; }
 .sloneczne-komfort h2 { font-size: clamp(2.2rem, 4vw, 3.8rem); }
 .sloneczne-komfort p { color: var(--tekst2); max-width: 42ch; }
-.sloneczne-komfort small { color: var(--tekst2); font-size: .72rem; }
 .sloneczne-komfort img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: .45rem; }
 .sloneczne-korekcja { display: grid; }
 .sloneczne-korekcja figure { margin: 0; overflow: hidden; }
