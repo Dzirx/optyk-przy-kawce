@@ -27,8 +27,10 @@
 
   // Nagłówki: rozbij na słowa (wejście słowo po słowie)
   $$('.split').forEach(function (el) {
-    var tekst = el.textContent.trim().split(/\s+/);
-    el.setAttribute('aria-label', el.textContent.trim());
+    // <br> w nagłówku traktujemy jak spację, żeby słowa się nie sklejały
+    var czysty = el.innerHTML.replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    var tekst = czysty.split(' ');
+    el.setAttribute('aria-label', czysty);
     el.innerHTML = tekst.map(function (s, i) {
       return '<span class="w" aria-hidden="true"><span style="--i:' + i + '">' + s + '</span></span> ';
     }).join('');
@@ -130,8 +132,7 @@
     } else { ustawB(0); suwak.value = 0; }
   }
 
-  // „Otwarte teraz" wg czasu w Polsce (pon–pt 9:00–18:00) i podświetlenie dzisiejszego dnia
-  var znacznik = $('[data-open-now]');
+  // Podświetlenie dzisiejszego dnia w godzinach otwarcia (czas w Polsce)
   try {
     var cz = new Intl.DateTimeFormat('en-US', {
       timeZone: 'Europe/Warsaw', weekday: 'short', hour: 'numeric', hour12: false
@@ -140,14 +141,6 @@
     var godz = parseInt(cz.filter(function (p) { return p.type === 'hour'; })[0].value, 10) % 24;
     var nr = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'].indexOf(dzien);
     var roboczy = nr >= 1 && nr <= 5;
-    if (znacznik) {
-      if (roboczy && godz >= 9 && godz < 18) {
-        znacznik.textContent = 'Otwarte teraz · do 18:00';
-        znacznik.classList.add('is-open');
-      } else {
-        znacznik.textContent = 'Pon–pt 9:00–18:00 · zadzwoń i umów wizytę';
-      }
-    }
     $$('.godziny [data-days]').forEach(function (w) {
       if (w.getAttribute('data-days').split(',').indexOf(String(nr)) !== -1) w.classList.add('is-today');
     });

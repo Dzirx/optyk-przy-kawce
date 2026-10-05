@@ -123,10 +123,6 @@ p { margin: 0 0 1rem; }
 .tytul__alt { color: var(--akcent); white-space: nowrap; }
 .hero__lead { font-size: 1.15rem; max-width: 36ch; color: var(--tekst2); }
 .hero__cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
-.hero__open { margin: 1.5rem 0 0; font-size: .9rem; color: var(--tekst2); min-height: 1.5em; }
-.hero__open:empty { display: none; }
-.hero__open::before { content: ""; display: inline-block; width: .6rem; height: .6rem; border-radius: 50%; margin-right: .5rem; background: var(--karmel); }
-.hero__open.is-open::before { background: #2fb36d; animation: puls 2s infinite; }
 .hero__foto img { width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover; object-position: 25% 40%; }
 
 /* Oferta */
@@ -201,7 +197,8 @@ p { margin: 0 0 1rem; }
 .faq-sekcja { padding-block: var(--sekcja) 0; }
 .faq-sekcja__grid { display: grid; gap: 2.5rem; align-items: start; }
 .faq .eyebrow { letter-spacing: .18em; font-size: .78rem; margin-bottom: .6rem; }
-.faq h2 { margin-bottom: 1.75rem; }
+.faq h2 { margin-bottom: 1.75rem; max-width: none; }
+@media (min-width: 800px) { .faq h2 { white-space: nowrap; } }
 .faq details { background: var(--papier); border: 1px solid var(--linia); border-radius: .75rem; margin-bottom: .75rem; transition: border-color .3s, box-shadow .3s; }
 .faq details[open] { border-color: var(--blekit-ciemny); box-shadow: 0 .6rem 1.6rem -1rem rgba(4, 26, 57, .35); }
 .faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.2rem 1.4rem; font-weight: 700; font-size: 1.3rem; line-height: 1.3; color: var(--granat); }
@@ -210,10 +207,6 @@ p { margin: 0 0 1rem; }
 .faq details[open] summary::after { transform: rotate(-135deg) translateY(-2px); }
 .faq details p { margin: 0; padding: 0 1.4rem 1.3rem; font-size: 1.12rem; color: var(--tekst2); max-width: 60ch; }
 
-.zapraszamy { display: grid; gap: 1.1rem; }
-.zapraszamy__foto { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 1rem; }
-.zapraszamy .eyebrow { font-size: .75rem; letter-spacing: .18em; margin-bottom: .4rem; }
-.zapraszamy h3 { font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.05; margin: 0; color: var(--granat); max-width: none; }
 
 /* Podstrona: Badanie wzroku */
 .blok .eyebrow, .tablica .eyebrow { letter-spacing: .18em; font-size: .78rem; margin-bottom: .6rem; }
@@ -253,11 +246,10 @@ p { margin: 0 0 1rem; }
 .przed-el strong { display: block; font-size: 1.3rem; line-height: 1.25; color: var(--granat); margin-bottom: .25rem; }
 .przed-el span { color: var(--tekst2); font-size: 1.05rem; line-height: 1.45; display: block; }
 .info-karty + .uwaga { margin-top: 1.75rem; }
-.faq-sekcja--krotka .zapraszamy__foto { aspect-ratio: 16 / 10; }
 .faq-sekcja--krotka { padding-bottom: 0; }
 .zobacz-tez { padding-top: clamp(2rem, 4vw, 3rem); }
 .zobacz-tez h2 { margin-bottom: 1.5rem; }
-.faq-sekcja--waska .faq { max-width: 52rem; }
+.faq-sekcja--waska .faq { max-width: none; }
 
 /* Strony prawne */
 .prawne { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
@@ -394,7 +386,6 @@ p { margin: 0 0 1rem; }
 
 @media (min-width: 800px) {
   .faq-sekcja__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; }
-  .zapraszamy { align-self: start; }
   .kontakt-sekcja__grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 4rem; }
   .mapa-duza { min-height: 28rem; }
   .stopka { padding-bottom: 1.5rem; }
@@ -565,7 +556,6 @@ h1, h2, h3 { font-weight: 700; }
 .top__nav a:not(.btn) { font-family: var(--font-tekst); }
 .oferta__wstep { display: grid; gap: 1rem; margin-bottom: 2rem; }
 .oferta__wstep h2 { font-size: clamp(2.8rem, 5.5vw, 4.7rem); line-height: 1; margin-bottom: 0; letter-spacing: -.045em; }
-.oferta__wstep > p { color: var(--tekst2); max-width: 39ch; margin: 0; align-self: end; }
 .oferta--salon .karty { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
 .oferta--salon .karta { border-radius: .65rem; box-shadow: none; }
 .oferta--salon .karta--duza { background: var(--mgla); }
@@ -614,8 +604,6 @@ h1, h2, h3 { font-weight: 700; }
  .zobacz-tez .karty { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (min-width: 800px) {
- .oferta__wstep { grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; }
- .oferta__wstep > p { padding-bottom: .35rem; }
  .oferta--salon .karta--duza { grid-template-columns: minmax(0, 1fr); }
  .oferta--salon .karta--duza .karta__zdjecie { order: -1; height: 18rem; }
  .oferta-page .hero--podstrona .hero__foto { position: relative; }
