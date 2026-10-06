@@ -123,7 +123,7 @@ p { margin: 0 0 1rem; }
 .tytul__alt { color: var(--akcent); white-space: nowrap; }
 .hero__lead { font-size: 1.15rem; max-width: 36ch; color: var(--tekst2); }
 .hero__cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
-.hero__foto img { width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover; object-position: 25% 40%; }
+.hero__foto img { width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 35%; }
 
 /* Oferta */
 .oferta { padding-block: var(--sekcja); }
@@ -366,7 +366,7 @@ p { margin: 0 0 1rem; }
   .chart { padding-left: 4.25rem; }
   .hero { gap: 1.5rem; padding-top: 0; }
   .hero__foto { order: -1; }
-  .hero__foto img { aspect-ratio: 5 / 4; object-position: 28% 40%; }
+  .hero__foto img { aspect-ratio: 5 / 4; object-position: 50% 35%; }
   .hero__cta .btn:not(.btn--ghost) { display: none; }
   .hero__cta .btn--ghost { background: var(--blekit-ciemny); color: #fff; border-color: var(--blekit-ciemny); }
   body { padding-bottom: 3.5rem; }
@@ -377,7 +377,7 @@ p { margin: 0 0 1rem; }
   .hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 0; padding: 0; min-height: calc(100vh - 4rem); align-items: stretch; }
   .hero__text { align-self: center; padding: 4rem 3rem 4rem max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter))); }
   .hero__foto { height: 100%; }
-  .hero__foto img { height: 100%; aspect-ratio: auto; min-height: 32rem; object-position: 30% 40%; }
+  .hero__foto img { height: 100%; aspect-ratio: auto; min-height: 32rem; object-position: 50% 35%; }
   .phero { grid-template-columns: 1.2fr .8fr; align-items: center; padding-top: 3rem; }
     .tablica__grid { grid-template-columns: 1fr 1fr; gap: 5rem; }
   .blok__grid { grid-template-columns: 1fr 1.4fr; gap: 4rem; }
@@ -483,7 +483,7 @@ p { margin: 0 0 1rem; }
 .badanie-kroki p { color: var(--tekst2); font-size: .98rem; line-height: 1.5; margin: auto 0 0; max-width: 29ch; }
 .badanie-przygotowanie { display: grid; }
 .badanie-przygotowanie figure { margin: 0; min-height: 0; overflow: hidden; }
-.badanie-przygotowanie img { width: 100%; height: 100%; max-height: 34rem; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 58%; }
+.badanie-przygotowanie img { width: 100%; height: 100%; max-height: 34rem; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 64%; }
 .badanie-przygotowanie__text { padding: 2.5rem var(--gutter); align-self: center; }
 .badanie-przygotowanie h2 { font-size: clamp(2.1rem, 3.6vw, 3.2rem); }
 .badanie-lista { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.5rem; }
@@ -565,7 +565,7 @@ h1, h2, h3 { font-weight: 700; }
 .oferta--salon .karta__link { font-size: .9rem; }
 .oferta--salon .karta__zdjecie { height: 15rem; min-height: 0; }
 .oferta--salon .karta__zdjecie img { object-position: 65% 38%; }
-.oferta--salon .karta__zdjecie--oprawki img { object-position: 50% 50%; }
+.oferta--salon .karta__zdjecie--oprawki img { object-position: 55% 45%; }
 .oferta--salon .karta--mala { background: transparent; border: 1px solid var(--linia); display: grid; grid-template-columns: 3.1rem minmax(0, 1fr); column-gap: 1.1rem; align-content: start; padding: 1.4rem 1.4rem 4.8rem; min-height: 14rem; }
 .oferta--salon .karta--mala .ico { grid-row: 1 / 3; width: 3.1rem; height: 3.1rem; padding: .6rem; border-radius: 50%; background: var(--mgla); color: var(--blekit-ciemny); margin: 0; }
 .oferta--salon .karta--mala h3 { font-size: 1.55rem; line-height: 1.05; letter-spacing: -.03em; overflow-wrap: anywhere; }
@@ -643,15 +643,24 @@ h1, h2, h3 { font-weight: 700; }
 .korekcyjne-link:hover { text-decoration: underline; text-underline-offset: .3em; }
 .korekcyjne-link span { font-size: 1.3rem; margin-left: .35rem; }
 .korekcyjne-hero__foto { margin: 0; overflow: hidden; }
-.korekcyjne-hero__foto img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 65% 30%; }
+.korekcyjne-hero__foto img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 55%; }
 .korekcyjne-skroty a { flex: 1 1 45%; }
 .korekcyjne-typy { padding-block: 2.8rem 3.5rem; }
 .korekcyjne-typy h2 { font-size: clamp(2.2rem, 4vw, 3.7rem); margin-bottom: 1.5rem; }
 .korekcyjne-typy__grid { display: grid; gap: 1rem; }
 .korekcyjne-typ { display: grid; grid-template-columns: minmax(0, 1fr); background: var(--mgla); border-radius: .55rem; overflow: hidden; text-decoration: none; color: var(--granat); }
-.korekcyjne-typ img { width: 100%; height: 11rem; object-fit: cover; object-position: 50% 35%; }
-.korekcyjne-typ:nth-child(2) img { object-position: 50% 30%; }
-.korekcyjne-typ:nth-child(3) img { object-position: 50% 50%; }
+.korekcyjne-typ > img, .typ-foto { width: 100%; height: 11rem; }
+.typ-foto { position: relative; overflow: hidden; background: #e3f2fb; }
+.typ-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 28%; }
+.typ-foto--dal img { animation: typ-dal 8s ease-in-out infinite; }
+.typ-foto--blisko img { animation: typ-blisko 8s ease-in-out infinite; }
+.typ-foto--prog img { opacity: 0; animation: typ-prog 9s ease-in-out infinite; }
+.typ-foto--prog .typ-foto__k2 { animation-delay: 3s; }
+.typ-foto--prog .typ-foto__k3 { animation-delay: 6s; }
+@keyframes typ-dal { 0%, 100% { transform: scale(1); filter: blur(0); } 50% { transform: scale(1.07); filter: blur(0); } 5% { filter: blur(2.5px); } }
+@keyframes typ-blisko { 0%, 100% { transform: scale(1.07); } 50% { transform: scale(1); } }
+@keyframes typ-prog { 0% { opacity: 0; filter: blur(3px); transform: scale(1.04); } 8%, 30% { opacity: 1; filter: blur(0); transform: scale(1); } 38%, 100% { opacity: 0; filter: blur(3px); transform: scale(1.04); } }
+@media (prefers-reduced-motion: reduce) { .typ-foto--prog .typ-foto__k1 { opacity: 1; } }
 .korekcyjne-typ > div { padding: .9rem 1rem 1rem; }
 .korekcyjne-typ h3 { font-size: 1.65rem; margin-bottom: .35rem; letter-spacing: -.04em; }
 .korekcyjne-typ p { color: var(--tekst2); font-size: .9rem; line-height: 1.4; margin: 0 0 .65rem; }
@@ -659,7 +668,7 @@ h1, h2, h3 { font-weight: 700; }
 .korekcyjne-typ b { font-size: 1rem; margin-left: .25rem; }
 .korekcyjne-oprawki { display: grid; background: var(--tlo); }
 .korekcyjne-oprawki figure { margin: 0; min-height: 0; overflow: hidden; }
-.korekcyjne-oprawki figure img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.korekcyjne-oprawki figure img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 70% 38%; }
 .korekcyjne-oprawki__text { padding: 2.5rem var(--gutter); align-self: center; }
 .korekcyjne-oprawki h2 { font-size: clamp(2.1rem, 4vw, 3.6rem); }
 .korekcyjne-oprawki__text > p:not(.eyebrow) { color: var(--tekst2); max-width: 41ch; }
@@ -670,14 +679,14 @@ h1, h2, h3 { font-weight: 700; }
 .korekcyjne-oprawki strong { font-size: 1rem; }
 .korekcyjne-oprawki small { color: var(--tekst2); font-size: .82rem; line-height: 1.35; margin-top: .15rem; }
 .korekcyjne-soczewki { background: var(--mgla); padding-block: 2.4rem 2.8rem; }
-.korekcyjne-soczewki h2 { font-size: clamp(2.2rem, 4.2vw, 3.8rem); }
+.korekcyjne-soczewki h2 { font-size: clamp(2.2rem, 4.2vw, 3.8rem); max-width: 18ch; text-wrap: balance; }
 .korekcyjne-soczewki__grid { display: grid; gap: .8rem; }
 .korekcyjne-soczewki article { background: var(--tlo); border-radius: .5rem; padding: 1rem; }
 .korekcyjne-soczewki article > span { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: #fff; color: var(--blekit-ciemny); font-size: 1.4rem; }
 .korekcyjne-soczewki h3 { font: 700 1rem/1.25 var(--font-tekst); margin: .7rem 0 .3rem; }
 .korekcyjne-soczewki p { color: var(--tekst2); font-size: .8rem; line-height: 1.4; margin: 0; }
 .korekcyjne-realizacja { padding-block: 2.8rem; }
-.korekcyjne-realizacja h2 { font-size: clamp(2.2rem, 4vw, 3.6rem); max-width: 18ch; }
+.korekcyjne-realizacja h2 { font-size: clamp(2.2rem, 4vw, 3.6rem); max-width: 22ch; text-wrap: balance; }
 .korekcyjne-realizacja ol { display: grid; gap: 1rem; list-style: none; padding: 0; margin: 1.4rem 0 0; }
 .korekcyjne-realizacja li { border-top: 1px solid var(--linia); padding: 1rem 0 0; }
 .korekcyjne-realizacja b { display: grid; place-items: center; width: 2.6rem; aspect-ratio: 1; border-radius: 50%; background: var(--mgla); color: var(--blekit-ciemny); font: 700 1rem var(--font-naglowek); }
@@ -685,7 +694,7 @@ h1, h2, h3 { font-weight: 700; }
 .korekcyjne-realizacja p { color: var(--tekst2); font-size: .88rem; margin: 0; }
 @media (min-width: 600px) {
   .korekcyjne-typy__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .korekcyjne-typ img { height: 10rem; }
+  .korekcyjne-typ img, .typ-foto { height: 10rem; }
   .korekcyjne-soczewki__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .korekcyjne-realizacja ol { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
 }
@@ -827,7 +836,7 @@ h1, h2, h3 { font-weight: 700; }
 .sloneczne-link:hover { text-decoration: underline; text-underline-offset: .3em; }
 .sloneczne-link span { font-size: 1.3rem; margin-left: .35rem; }
 .sloneczne-hero__foto { margin: 0; overflow: hidden; }
-.sloneczne-hero__foto img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 38%; }
+.sloneczne-hero__foto img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 26%; }
 .sloneczne-skroty a { flex: 1 1 45%; }
 .sloneczne-style { padding-block: 2.8rem 3.5rem; }
 .sloneczne-style h2 { font-size: clamp(2.25rem, 4.5vw, 3.9rem); margin-bottom: 1.5rem; }

@@ -71,7 +71,7 @@ Zdjęcia osób wymagają ich zgody.
 
 ## Uwagi
 - Nie mam narzędzia do generowania zdjęć. Zamiast nich są ilustracje liniowe SVG.
-- Logo przerobione na przezroczyste tło (`img/logo.png`: błękitne „Optyk", granatowe „przy kawce"). Oryginał w `assets/logo.png`. Docelowo lepsza byłaby wersja wektorowa (SVG).
+- Logo przerobione na przezroczyste tło (`img/optyk-przy-kawce-logo.png`: błękitne „Optyk", granatowe „przy kawce"). Docelowo lepsza byłaby wersja wektorowa (SVG).
 - Treści napisane od zera. Strona Optymax posłużyła jako wskazówka, jakie usługi zwykle wchodzą w skład oferty. Nie kopiujemy z niej tekstów, układu ani danych.
 
 ## Ocena krytyka (screenshot, świeży kontekst)

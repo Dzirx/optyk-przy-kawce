@@ -36,8 +36,8 @@
 - Do ustalenia w fazie Discover (wstępnie: ciepło, zaufanie, indywidualne podejście).
 
 ## Materiały od klienta
-- `assets/logo.png`: logo (niebieski szeryfowy napis „Optyk” + biały „przy kawce” z okularami, na czarnym tle)
-- `assets/salon-gablota.png`: zdjęcie wnętrza, szklana gablota z oprawkami, ciepłe drewno i czarny metal
+- `img/optyk-przy-kawce-logo.png`: logo (niebieski szeryfowy napis „Optyk” + biały „przy kawce” z okularami, na czarnym tle)
+- `img/salon-optyczny-lublin-gablota-z-oprawkami.jpg`: zdjęcie wnętrza, szklana gablota z oprawkami, ciepłe drewno i czarny metal
 
 ## Do uzupełnienia
 - Link do Instagrama i ewentualnie Facebooka
