@@ -275,6 +275,9 @@ p { margin: 0 0 1rem; }
 .kontakt-lista span, .kontakt-lista a { display: block; color: var(--tekst2); text-decoration: none; }
 .kontakt-lista a:hover { color: var(--blekit-ciemny); text-decoration: underline; text-underline-offset: .25em; }
 .kontakt-lista li > div > a:first-of-type { font-weight: 700; color: var(--granat); }
+.kontakt-lista .kontakt-social { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+.kontakt-lista .kontakt-social a { display: inline-flex; align-items: center; gap: .4rem; font-weight: 700; color: var(--granat); }
+.kontakt-lista .kontakt-social svg { width: 1.3rem; height: 1.3rem; flex: none; stroke: none; }
 .godziny .is-today { color: var(--granat); font-weight: 700; }
 .godziny .is-today::after { content: "dziś"; margin-left: .55rem; padding: .05rem .5rem; border-radius: 999px; background: var(--blekit-ciemny); color: #fff; font-size: .65rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; vertical-align: .1em; }
 .kontakt-sekcja__cta { display: flex; flex-wrap: wrap; gap: .75rem; }
@@ -292,6 +295,11 @@ p { margin: 0 0 1rem; }
 .stopka__prawne { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.75rem; }
 .stopka__prawne a { font-weight: 600; }
 .stopka__copy { margin: 0; font-size: .9rem; color: var(--tekst2); }
+.fb-plywajacy { position: fixed; left: 0; top: 50%; z-index: 35; display: grid; place-items: center; width: 2.9rem; height: 2.9rem; margin-top: -1.45rem; background: #1877F2; color: #fff; border-radius: 0 .55rem .55rem 0; box-shadow: 0 .4rem 1.2rem rgba(4, 26, 57, .25); transition: width .25s var(--ease), background .2s; }
+.fb-plywajacy svg { width: 1.7rem; height: 1.7rem; }
+.fb-plywajacy:hover, .fb-plywajacy:focus-visible { width: 3.5rem; background: #0f63d1; }
+@media (max-width: 799px) { .fb-plywajacy { top: 42%; width: 2.5rem; height: 2.5rem; margin-top: -1.25rem; } .fb-plywajacy svg { width: 1.5rem; height: 1.5rem; } }
+@media print { .fb-plywajacy { display: none; } }
 
 .callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: none; justify-content: center; align-items: center; min-height: 3.5rem; background: var(--blekit-ciemny); color: #fff; font-weight: 700; text-decoration: none; padding-bottom: env(safe-area-inset-bottom); box-shadow: 0 -6px 20px rgba(4, 26, 57, .18); }
 
@@ -367,7 +375,7 @@ p { margin: 0 0 1rem; }
   .chart { padding-left: 4.25rem; }
   .hero { gap: 1.5rem; padding-top: 0; }
   .hero__foto { order: -1; }
-  .hero__foto img { aspect-ratio: 5 / 4; object-position: 50% 35%; }
+  .hero__foto img { aspect-ratio: 1 / 1; object-position: 50% 52%; }
   .hero__cta .btn:not(.btn--ghost) { display: none; }
   .hero__cta .btn--ghost { background: var(--blekit-ciemny); color: #fff; border-color: var(--blekit-ciemny); }
   body { padding-bottom: 3.5rem; }
@@ -1029,3 +1037,33 @@ h1, h2, h3 { font-weight: 700; }
   .ref-przygotuj figure img { position:absolute; inset:0; aspect-ratio:auto; }
   .ref-przygotuj__text { padding:3.5rem max(var(--gutter),calc((100vw - var(--wrap))/2 + var(--gutter))) 3.5rem 2.8rem; }
 }
+
+
+/* Opinie klientów (cytaty z Google): przewijany pas kart */
+.opinie { background: var(--tlo); margin-top: var(--sekcja); padding-block: var(--sekcja); }
+.opinie__glowa { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; margin-bottom: 1.75rem; }
+.opinie .eyebrow { letter-spacing: .18em; font-size: .78rem; margin-bottom: .6rem; }
+.opinie h2 { max-width: none; margin: 0; }
+.opinie__nav { display: none; gap: .6rem; flex: none; }
+.opinie__btn { display: grid; place-items: center; width: 2.9rem; height: 2.9rem; border-radius: 50%; border: 1px solid var(--blekit-ciemny); background: #fff; color: var(--blekit-ciemny); cursor: pointer; transition: background .2s, color .2s; }
+.opinie__btn svg { width: 1.3rem; height: 1.3rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.opinie__btn:hover, .opinie__btn:focus-visible { background: var(--blekit-ciemny); color: #fff; }
+.opinie__tor { overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.opinie__tor::-webkit-scrollbar { display: none; }
+.opinie__tor:focus-visible { outline: 2px solid var(--blekit-ciemny); outline-offset: -2px; }
+.opinie__lista { display: flex; align-items: flex-start; gap: 1rem; width: max-content; padding: .3rem var(--gutter) 1rem; margin-inline: auto; }
+.opinia { margin: 0; flex: none; width: min(84vw, 23rem); scroll-snap-align: start; background: #fff; border-radius: .7rem; padding: 1.4rem 1.4rem 1.3rem; display: flex; flex-direction: column; gap: 1rem; border: 1px solid var(--linia); box-shadow: 0 .4rem 1.2rem rgba(4, 26, 57, .06); }
+.opinia__top { display: flex; align-items: center; justify-content: space-between; }
+.opinia__g { width: 1.7rem; height: 1.7rem; }
+.opinia__ava { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--blekit-ciemny); color: #fff; font: 700 1.05rem var(--font-tekst); }
+.opinia:nth-child(2n) .opinia__ava { background: var(--blekit); }
+.opinia:nth-child(3n) .opinia__ava { background: var(--karmel); }
+.opinia blockquote { margin: 0; flex: 1; }
+.opinia:not(.is-open) blockquote p { display: -webkit-box; -webkit-line-clamp: 5; line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+.opinia__wiecej { align-self: flex-start; margin-top: .55rem; padding: 0; border: 0; background: none; font: 700 .85rem var(--font-tekst); color: var(--blekit-ciemny); text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+.opinia__wiecej:hover, .opinia__wiecej:focus-visible { color: var(--akcent); }
+.opinia p { margin: 0; font-size: .95rem; line-height: 1.6; color: var(--granat); }
+.opinia figcaption { font-weight: 700; color: var(--granat); font-size: .95rem; border-top: 1px solid var(--linia); padding-top: .9rem; }
+.opinia figcaption span { display: block; font-weight: 500; font-size: .78rem; color: var(--tekst2); margin-top: .15rem; }
+.opinie__link { margin: 1.25rem 0 0; }
+@media (min-width: 800px) { .opinie__nav { display: flex; } .opinia { width: 24rem; } }

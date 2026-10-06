@@ -132,6 +132,33 @@
     } else { ustawB(0); suwak.value = 0; }
   }
 
+  // Opinie: przewijanie kartami strzałkami
+  var opinie = $('[data-opinie]');
+  if (opinie) {
+    var krok = function (k) {
+      var karta = $('.opinia', opinie);
+      var szer = karta ? karta.getBoundingClientRect().width + 16 : 340;
+      opinie.scrollBy({ left: k * szer, behavior: reduced ? 'auto' : 'smooth' });
+    };
+    var pp = $('[data-opinie-prev]'), nn = $('[data-opinie-next]');
+    if (pp) pp.addEventListener('click', function () { krok(-1); });
+    if (nn) nn.addEventListener('click', function () { krok(1); });
+  }
+
+  // Opinie: długie teksty skrócone, „Czytaj więcej” rozwija kartę
+  $$('.opinia').forEach(function (karta) {
+    var tekst = $('blockquote p', karta);
+    if (!tekst || tekst.scrollHeight <= tekst.clientHeight + 2) return;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'opinia__wiecej'; b.textContent = 'Czytaj więcej'; b.setAttribute('aria-expanded', 'false');
+    b.addEventListener('click', function () {
+      var otwarta = karta.classList.toggle('is-open');
+      b.textContent = otwarta ? 'Zwiń' : 'Czytaj więcej';
+      b.setAttribute('aria-expanded', String(otwarta));
+    });
+    $('blockquote', karta).appendChild(b);
+  });
+
   // Podświetlenie dzisiejszego dnia w godzinach otwarcia (czas w Polsce)
   try {
     var cz = new Intl.DateTimeFormat('en-US', {
