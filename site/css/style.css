@@ -250,6 +250,7 @@ p { margin: 0 0 1rem; }
 .zobacz-tez { padding-top: clamp(2rem, 4vw, 3rem); }
 .zobacz-tez h2 { margin-bottom: 1.5rem; }
 .faq-sekcja--waska .faq { max-width: none; }
+.faq-sekcja--oferta { padding-block: calc(var(--sekcja) * .45) var(--sekcja); }
 
 /* Strony prawne */
 .prawne { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
@@ -492,7 +493,7 @@ p { margin: 0 0 1rem; }
 .badanie-lista strong { display: block; font-size: 1rem; line-height: 1.4; }
 .badanie-lista p { color: var(--tekst2); font-size: .92rem; line-height: 1.45; margin: .2rem 0 0; }
 .badanie-przygotowanie__uwaga { border-top: 1px solid var(--linia); margin: 1.5rem 0 0; padding-top: 1rem; font-size: .8rem; color: var(--tekst2); }
-.badanie-faq { padding-block: 2.5rem; }
+.badanie-faq { padding-block: 1.1rem 3rem; }
 .badanie-faq .faq details { border-radius: .35rem; background: transparent; margin-bottom: .5rem; }
 .badanie-faq .faq summary { padding: .85rem 1.3rem; font-size: 1.05rem; font-weight: 600; }
 .badanie-faq .faq details p { font-size: 1rem; max-width: 75ch; }
@@ -565,7 +566,7 @@ h1, h2, h3 { font-weight: 700; }
 .oferta--salon .karta__link { font-size: .9rem; }
 .oferta--salon .karta__zdjecie { height: 15rem; min-height: 0; }
 .oferta--salon .karta__zdjecie img { object-position: 65% 38%; }
-.oferta--salon .karta__zdjecie--oprawki img { object-position: 55% 45%; }
+.oferta--salon .karta__zdjecie--oprawki img { object-position: 50% 40%; }
 .oferta--salon .karta--mala { background: transparent; border: 1px solid var(--linia); display: grid; grid-template-columns: 3.1rem minmax(0, 1fr); column-gap: 1.1rem; align-content: start; padding: 1.4rem 1.4rem 4.8rem; min-height: 14rem; }
 .oferta--salon .karta--mala .ico { grid-row: 1 / 3; width: 3.1rem; height: 3.1rem; padding: .6rem; border-radius: 50%; background: var(--mgla); color: var(--blekit-ciemny); margin: 0; }
 .oferta--salon .karta--mala h3 { font-size: 1.55rem; line-height: 1.05; letter-spacing: -.03em; overflow-wrap: anywhere; }
@@ -733,7 +734,7 @@ h1, h2, h3 { font-weight: 700; }
 .progresywne-link:hover { text-decoration: underline; text-underline-offset: .3em; }
 .progresywne-link span { font-size: 1.3rem; margin-left: .35rem; }
 .progresywne-hero__foto { margin: 0; overflow: hidden; }
-.progresywne-hero__foto img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 65% 30%; }
+.progresywne-hero__foto img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 38%; }
 .progresywne-skroty a { flex: 1 1 45%; }
 .progresywne-typy { padding-block: 2.8rem 3.5rem; }
 .progresywne-typy h2 { font-size: clamp(2.2rem, 4vw, 3.7rem); margin-bottom: 1.5rem; }
@@ -749,7 +750,7 @@ h1, h2, h3 { font-weight: 700; }
 .progresywne-typ b { font-size: 1rem; margin-left: .25rem; }
 .progresywne-oprawki { display: grid; background: var(--tlo); }
 .progresywne-oprawki figure { margin: 0; min-height: 0; overflow: hidden; }
-.progresywne-oprawki figure img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.progresywne-oprawki figure img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 52%; }
 .progresywne-oprawki__text { padding: 2.5rem var(--gutter); align-self: center; }
 .progresywne-oprawki h2 { font-size: clamp(2.1rem, 4vw, 3.6rem); }
 .progresywne-oprawki__text > p:not(.eyebrow) { color: var(--tekst2); max-width: 41ch; }
@@ -761,6 +762,7 @@ h1, h2, h3 { font-weight: 700; }
 .progresywne-oprawki small { color: var(--tekst2); font-size: .82rem; line-height: 1.35; margin-top: .15rem; }
 .progresywne-soczewki { background: var(--mgla); padding-block: 2.4rem 2.8rem; }
 .progresywne-soczewki h2 { font-size: clamp(2.2rem, 4.2vw, 3.8rem); }
+@media (min-width: 800px) { .progresywne-soczewki h2 { max-width: none; white-space: nowrap; } }
 .progresywne-soczewki__grid { display: grid; gap: .8rem; }
 .progresywne-soczewki article { background: var(--tlo); border-radius: .5rem; padding: 1rem; }
 .progresywne-soczewki article > span { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: #fff; color: var(--blekit-ciemny); font-size: 1.4rem; }
