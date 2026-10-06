@@ -768,8 +768,8 @@ h1, h2, h3 { font-weight: 700; }
 .progresywne-soczewki article > span { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: #fff; color: var(--blekit-ciemny); font-size: 1.4rem; }
 .progresywne-soczewki h3 { font: 700 1rem/1.25 var(--font-tekst); margin: .7rem 0 .3rem; }
 .progresywne-soczewki p { color: var(--tekst2); font-size: .8rem; line-height: 1.4; margin: 0; }
-.progresywne-realizacja { padding-block: 2.8rem; }
-.progresywne-realizacja h2 { font-size: clamp(2.2rem, 4vw, 3.6rem); max-width: 18ch; }
+.progresywne-realizacja { padding-block: 2.8rem 1rem; }
+.progresywne-realizacja h2 { font-size: clamp(2.2rem, 4vw, 3.6rem); max-width: 18ch; margin-bottom: 1rem; }
 .progresywne-realizacja ol { display: grid; gap: 1rem; list-style: none; padding: 0; margin: 1.4rem 0 0; }
 .progresywne-realizacja li { border-top: 1px solid var(--linia); padding: 1rem 0 0; }
 .progresywne-realizacja b { display: grid; place-items: center; width: 2.6rem; aspect-ratio: 1; border-radius: 50%; background: var(--mgla); color: var(--blekit-ciemny); font: 700 1rem var(--font-naglowek); }
@@ -792,7 +792,7 @@ h1, h2, h3 { font-weight: 700; }
   .progresywne-oprawki figure img { position: absolute; inset: 0; aspect-ratio: auto; }
   .progresywne-oprawki__text { padding: 3.5rem max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter))) 3.5rem 2.8rem; }
   .progresywne-soczewki { padding-block: 3.2rem 3.8rem; }
-  .progresywne-realizacja { padding-block: 4rem; }
+  .progresywne-realizacja { padding-block: 4rem 1.5rem; }
 }
 
 /* FAQ na podstronach ofert: nagłówek nie łamie się sztucznie na szerokim ekranie. */
@@ -818,11 +818,12 @@ h1, h2, h3 { font-weight: 700; }
 .progresywne-realizacja__grid li strong, .progresywne-realizacja__grid li p { display: block; }
 .progresywne-realizacja__grid li strong { font-size: .98rem; }
 .progresywne-realizacja__grid li p { color: var(--tekst2); font-size: .82rem; line-height: 1.4; margin: .15rem 0 0; }
-.progresywne-realizacja__grid > img { display: block; width: 100%; height: 20rem; object-fit: cover; object-position: 50% 35%; border-radius: .45rem; }
+.progresywne-realizacja__grid > img { display: block; width: 100%; height: 20rem; object-fit: cover; object-position: 50% 45%; border-radius: .45rem; }
 @media (min-width: 800px) {
   .progresywne-typy__grid article img { height: 10rem; }
   .progresywne-realizacja__grid { grid-template-columns: minmax(0, 1fr) minmax(18rem, .8fr); align-items: center; gap: 3rem; }
   .progresywne-realizacja__grid > img { height: 22rem; }
+  .progresywne-realizacja > .eyebrow, .progresywne-realizacja > h2 { position: relative; top: 3.2rem; }
 }
 
 /* Mockup podstrony okularów przeciwsłonecznych. */
@@ -998,7 +999,7 @@ h1, h2, h3 { font-weight: 700; }
 .ref-hero__foto img { display:block; width:100%; height:100%; aspect-ratio:4/3; object-fit:cover; object-position:50% 40%; }
 .ref-skroty a { flex:1 1 45%; }
 .ref-kroki { padding-block:2.8rem; }
-.ref-kroki h2,.ref-doplata h2 { font-size:clamp(2.2rem,4.5vw,3.7rem); margin-bottom:1.3rem; }
+.ref-kroki h2 { font-size:clamp(2.2rem,4.5vw,3.7rem); margin-bottom:1.3rem; }
 .ref-kroki__grid { display:grid; gap:.8rem; }
 .ref-kroki article { display:grid; grid-template-columns:3.1rem 1fr; gap:.9rem; align-items:start; background:var(--mgla); border-radius:.45rem; padding:1rem; }
 .ref-kroki article b { display:grid; place-items:center; width:2.8rem; aspect-ratio:1; border-radius:50%; background:#e0f3ff; color:var(--blekit-ciemny); font:700 1.2rem var(--font-naglowek); }
@@ -1006,7 +1007,7 @@ h1, h2, h3 { font-weight: 700; }
 .ref-kroki p { color:var(--tekst2); font-size:.82rem; line-height:1.35; margin:0; }
 .ref-przygotuj { display:grid; background:var(--tlo); }
 .ref-przygotuj figure { margin:0; overflow:hidden; }
-.ref-przygotuj figure img { display:block; width:100%; height:100%; aspect-ratio:4/3; object-fit:cover; }
+.ref-przygotuj figure img { display:block; width:100%; height:100%; aspect-ratio:4/3; object-fit:cover; object-position:55% 50%; }
 .ref-przygotuj__text { padding:2.5rem var(--gutter); align-self:center; }
 .ref-przygotuj h2 { font-size:clamp(2.2rem,4.3vw,3.7rem); margin-bottom:1.2rem; }
 .ref-przygotuj ul { list-style:none; padding:0; margin:0; display:grid; gap:.9rem; }
@@ -1014,17 +1015,8 @@ h1, h2, h3 { font-weight: 700; }
 .ref-ico { display:grid; place-items:center; flex:0 0 2.5rem; width:2.5rem; height:2.5rem; border-radius:50%; background:#e8f6ff; color:var(--blekit); font-size:1.3rem; }
 .ref-przygotuj strong { color:var(--blekit-ciemny); font-size:.92rem; }
 .ref-note { margin:1rem 0 0; padding:.7rem 1rem; border-radius:.35rem; background:var(--mgla); color:var(--tekst2); font-size:.78rem; }
-.ref-doplata { background:var(--mgla); padding-block:2.5rem; }
-.ref-doplata__lead { color:var(--tekst2); margin:-.8rem 0 1.4rem; }
-.ref-doplata__grid { display:grid; gap:.7rem; }
-.ref-doplata__grid article { display:flex; align-items:center; gap:.85rem; background:var(--tlo); border-radius:.4rem; padding:1rem; color:var(--blekit-ciemny); }
-.ref-doplata__grid strong { font-size:.85rem; line-height:1.15; }
-.ref-doplata__foot { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:1.1rem; }
-.ref-doplata__foot p { color:var(--tekst2); font-size:.78rem; margin:0; }
-.ref-doplata__foot .btn { white-space:nowrap; }
 @media (min-width:700px) {
   .ref-kroki__grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
-  .ref-doplata__grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
 }
 @media (min-width:800px) {
   .ref-hero { grid-template-columns:minmax(0,45fr) minmax(0,55fr); }
