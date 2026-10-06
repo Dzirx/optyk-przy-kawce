@@ -1068,3 +1068,19 @@ h1, h2, h3 { font-weight: 700; }
 .opinia figcaption span { display: block; font-weight: 500; font-size: .78rem; color: var(--tekst2); margin-top: .15rem; }
 .opinie__link { margin: 1.25rem 0 0; }
 @media (min-width: 800px) { .opinie__nav { display: flex; } .opinia { width: 24rem; } }
+
+/* Cookies: baner zgody i blokada mapy */
+.cookies { position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 60; max-width: 44rem; margin-inline: auto; display: grid; gap: 1rem; padding: 1.2rem 1.3rem; background: #fff; color: var(--granat); border: 1px solid var(--linia); border-radius: .75rem; box-shadow: 0 1rem 2.5rem rgba(4, 26, 57, .22); }
+.cookies[hidden] { display: none; }
+.cookies p { margin: 0; font-size: .92rem; line-height: 1.5; color: var(--tekst2); }
+.cookies strong { display: block; color: var(--granat); font-size: 1.05rem; margin-bottom: .25rem; }
+.cookies a { color: var(--blekit-ciemny); font-weight: 600; }
+.cookies__przyciski { display: flex; flex-wrap: wrap; gap: .6rem; }
+@media (min-width: 700px) { .cookies { grid-template-columns: 1fr auto; align-items: center; left: 1.5rem; right: auto; margin-inline: 0; max-width: 50rem; } }
+.mapa-blokada { position: absolute; inset: 0; z-index: 1; display: grid; place-content: center; justify-items: center; gap: 1.1rem; padding: 1.5rem; text-align: center; background: var(--mgla); }
+.mapa-blokada[hidden] { display: none; }
+.mapa-blokada p { margin: 0; color: var(--tekst2); max-width: 26ch; }
+.mapa-blokada strong { display: block; color: var(--granat); font-size: 1.15rem; margin-bottom: .3rem; }
+.mapa-blokada__przyciski { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; }
+.stopka__cookies { padding: 0; border: 0; background: none; font: inherit; font-weight: 600; color: var(--tekst2); cursor: pointer; }
+.stopka__cookies:hover { color: var(--blekit-ciemny); text-decoration: underline; text-underline-offset: .25em; }

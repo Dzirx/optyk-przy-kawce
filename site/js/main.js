@@ -159,6 +159,46 @@
     $('blockquote', karta).appendChild(b);
   });
 
+  // Cookies: baner zgody. Mapa Google ładuje się dopiero po akceptacji.
+  var KLUCZ = 'opk-cookies';
+  var odczyt = function () { try { return localStorage.getItem(KLUCZ); } catch (e) { return null; } };
+  var zapis = function (v) { try { localStorage.setItem(KLUCZ, v); } catch (e) { /* bez zapisu */ } };
+  var zastosuj = function (zgoda) {
+    $$('[data-mapa]').forEach(function (m) {
+      var ramka = $('iframe', m), blokada = $('[data-mapa-blokada]', m);
+      if (!ramka) return;
+      if (zgoda === 'tak') {
+        if (!ramka.getAttribute('src')) ramka.setAttribute('src', ramka.getAttribute('data-src'));
+        if (blokada) blokada.hidden = true;
+      } else {
+        if (blokada) blokada.hidden = false;
+      }
+    });
+  };
+  var baner = null;
+  var pokazBaner = function () {
+    if (baner) { baner.hidden = false; return; }
+    baner = document.createElement('div');
+    baner.className = 'cookies';
+    baner.setAttribute('role', 'dialog');
+    baner.setAttribute('aria-label', 'Pliki cookies');
+    baner.innerHTML = '<p><strong>Pliki cookies</strong>Ta strona korzysta z plików cookies firmy Google, aby wyświetlać mapę z lokalizacją salonu. Czy akceptujesz ich użycie? <a href="/polityka-cookies">Polityka cookies</a></p>' +
+      '<div class="cookies__przyciski"><button class="btn" type="button" data-cookies="tak">Akceptuję</button><button class="btn btn--ghost" type="button" data-cookies="nie">Odrzucam</button></div>';
+    baner.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-cookies]');
+      if (!b) return;
+      var v = b.getAttribute('data-cookies');
+      zapis(v); zastosuj(v); baner.hidden = true;
+    });
+    document.body.appendChild(baner);
+  };
+  zastosuj(odczyt());
+  if (!odczyt()) pokazBaner();
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-cookies-ustawienia]')) pokazBaner();
+    if (e.target.closest('[data-cookies-wlacz]')) { zapis('tak'); zastosuj('tak'); if (baner) baner.hidden = true; }
+  });
+
   // Podświetlenie dzisiejszego dnia w godzinach otwarcia (czas w Polsce)
   try {
     var cz = new Intl.DateTimeFormat('en-US', {
