@@ -206,6 +206,7 @@ p { margin: 0 0 1rem; }
 .faq summary::after { content: ""; flex: none; width: .55rem; height: .55rem; border-right: 2px solid var(--granat); border-bottom: 2px solid var(--granat); transform: rotate(45deg) translateY(-2px); transition: transform .35s var(--ease); }
 .faq details[open] summary::after { transform: rotate(-135deg) translateY(-2px); }
 .faq details p { margin: 0; padding: 0 1.4rem 1.3rem; font-size: 1.12rem; color: var(--tekst2); max-width: 60ch; }
+@media (min-width: 800px) { .faq details p { max-width: 80ch; } }
 
 
 /* Podstrona: Badanie wzroku */
